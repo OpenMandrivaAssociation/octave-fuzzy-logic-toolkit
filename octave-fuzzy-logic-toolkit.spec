@@ -1,21 +1,22 @@
 %global octpkg fuzzy-logic-toolkit
 
 Summary:	A mostly MATLAB-compatible fuzzy logic toolkit for Octave
-Name:		octave-%{octpkg}
+Name:		octave-fuzzy-logic-toolkit
 Version:	0.4.6
 Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
-BuildArch:	noarch
+Url:		https://packages.octave.org/fuzzy-logic-toolkit/
+Source0:	https://downloads.sourceforge.net/octave/fuzzy-logic-toolkit-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 3.2.4
+BuildRequires:  octave-devel >= 3.2.4
 
 Requires:	octave(api) = %{octave_api}
 
 Requires(post): octave
 Requires(postun): octave
+
+BuildArch:	noarch
 
 %description
 A mostly MATLAB-compatible fuzzy logic toolkit for Octave.
@@ -30,9 +31,6 @@ A mostly MATLAB-compatible fuzzy logic toolkit for Octave.
 
 %prep
 %autosetup -p1 -n %{octpkg}
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 %octave_pkg_build
