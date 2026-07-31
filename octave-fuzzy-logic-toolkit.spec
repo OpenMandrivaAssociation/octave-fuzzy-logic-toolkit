@@ -2,8 +2,8 @@
 
 Summary:	A mostly MATLAB-compatible fuzzy logic toolkit for Octave
 Name:		octave-fuzzy-logic-toolkit
-Version:	0.6.1
-Release:	2
+Version:	0.6.2
+Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/fuzzy-logic-toolkit/
@@ -30,7 +30,7 @@ A mostly MATLAB-compatible fuzzy logic toolkit for Octave.
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{octpkg}-%{version}
+%autosetup -p1 -n fuzzy-logic-toolkit-0.6.2
 
 %build
 %octave_pkg_build
